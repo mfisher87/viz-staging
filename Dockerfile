@@ -5,9 +5,9 @@ RUN apt-get update \
  && apt-get install -y libspatialindex-dev gdal-bin libgdal-dev proj-bin libproj-dev
 
 # Set environment variables for GDAL
-ENV GDAL_CONFIG=/usr/bin/gdal-config
-ENV GDAL_VERSION=3.8
-ENV PROJ_DIR=/usr
+ENV GDAL_CONFIG=/usr/bin/gdal-config \
+    GDAL_VERSION=3.8 \
+    PROJ_DIR=/usr
 
 # Install specific version of Fiona
 RUN pip install fiona==1.8.21
