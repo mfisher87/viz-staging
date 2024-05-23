@@ -9,9 +9,6 @@ ENV GDAL_CONFIG=/usr/bin/gdal-config \
     GDAL_VERSION=3.8 \
     PROJ_DIR=/usr
 
-# Install specific version of Fiona
-RUN pip install fiona==1.8.21
-
 # Install pdgstaging from GitHub repo using pip
 RUN pip install git+https://github.com/PermafrostDiscoveryGateway/viz-staging.git
 
