@@ -1,11 +1,8 @@
-# Use the official Python 3.9 base image
 FROM python:3.9
 
 # Install transitive dependencies
-RUN apt-get update && apt-get install -y libspatialindex-dev
-
-# Install GDAL and PROJ libraries
-RUN apt-get install -y gdal-bin libgdal-dev proj-bin libproj-dev
+RUN apt-get update \
+ && apt-get install -y libspatialindex-dev gdal-bin libgdal-dev proj-bin libproj-dev
 
 # Set environment variables for GDAL
 ENV GDAL_CONFIG=/usr/bin/gdal-config
