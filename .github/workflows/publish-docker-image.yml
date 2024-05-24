@@ -20,7 +20,7 @@ jobs:
   build-and-release-image:
     name: "Build and release container image"
     runs-on: "ubuntu-latest"
-  
+
     permissions:
       # contents: "read"
       packages: "write"
