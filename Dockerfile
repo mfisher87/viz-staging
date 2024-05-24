@@ -5,7 +5,7 @@ RUN apt-get update \
  && apt-get install -y git libspatialindex-dev libgdal-dev libproj-dev
 
 # Install pdgstaging from GitHub repo
-RUN pip install git+https://github.com/PermafrostDiscoveryGateway/viz-staging.git
+RUN pip install git+https://github.com/mfisher87/viz-staging.git@try-slimming-more
 
 WORKDIR /app
 
