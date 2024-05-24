@@ -4,7 +4,7 @@ FROM python:3.9-slim
 RUN apt-get update \
  && apt-get install -y git libspatialindex-dev gdal-bin libgdal-dev proj-bin libproj-dev
 
-# Install pdgstaging from GitHub repo using pip
+# Install pdgstaging from GitHub repo
 RUN pip install git+https://github.com/PermafrostDiscoveryGateway/viz-staging.git
 
 WORKDIR /app
