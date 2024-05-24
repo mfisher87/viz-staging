@@ -1,8 +1,8 @@
-FROM python:3.9
+FROM python:3.9-slim
 
 # Install transitive dependencies
 RUN apt-get update \
- && apt-get install -y libspatialindex-dev gdal-bin libgdal-dev proj-bin libproj-dev
+ && apt-get install -y git libspatialindex-dev gdal-bin libgdal-dev proj-bin libproj-dev
 
 # Set environment variables for GDAL
 ENV GDAL_CONFIG=/usr/bin/gdal-config \
@@ -12,8 +12,6 @@ ENV GDAL_CONFIG=/usr/bin/gdal-config \
 # Install pdgstaging from GitHub repo using pip
 RUN pip install git+https://github.com/PermafrostDiscoveryGateway/viz-staging.git
 
-# Set the working directory
 WORKDIR /app
 
-# Default command to execute when the container starts
 CMD ["python3"]
