@@ -21,7 +21,7 @@ setup(
         'morecantile >= 3.1, < 4.0',
         'Rtree >= 0.9, < 1.0',
         'filelock >= 3.6, < 4.0',
-        'coloraide >= 0.10, < 1',
+        'coloraide >= 3.3, < 4.0',
         'colormaps == 0.4.0',
 
         # Transitive dependancies below this line; we don't support breaking changes in
